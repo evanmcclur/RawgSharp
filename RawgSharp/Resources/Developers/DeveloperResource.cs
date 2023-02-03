@@ -2,11 +2,11 @@
 
 namespace RawgSharp.Resources.Developers
 {
-	public class DeveloperResource : Resource<Developer>
-	{
-		public DeveloperResource()
-		{
-		}
+    public class DeveloperResource : Resource<Developer>, IDeveloperResource
+    {
+        public DeveloperResource(HttpClient client)
+        {
+        }
 
         /// <summary>
         /// Gets the details of a game developer

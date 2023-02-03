@@ -4,7 +4,9 @@ namespace RawgSharp.Resources
 {
 	public abstract class Resource<T>
 	{
-		public Resource()
+		protected readonly string BASE_URL = "https://api.rawg.io/api/";
+
+        public Resource()
 		{
 		}
     }
