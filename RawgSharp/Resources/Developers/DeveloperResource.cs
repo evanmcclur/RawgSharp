@@ -4,29 +4,20 @@ namespace RawgSharp.Resources.Developers
 {
     public class DeveloperResource : Resource<Developer>, IDeveloperResource
     {
+        private HttpClient _client;
+
         public DeveloperResource(HttpClient client)
         {
+            _client = client;
         }
 
-        /// <summary>
-        /// Gets the details of a game developer
-        /// </summary>
-        /// <returns>Game developer details</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public DeveloperDetails Get(int id)
+        public async Task<Paginated<Developer>> GetAllDevelopersAsync()
         {
-            // TODO
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Gets a list of game developers
-        /// </summary>
-        /// <returns>List of game developers</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public ApiPaginatedResponse<Developer> GetAll()
+        public async Task<Developer> GetDeveloperDetailsAsync(int id)
         {
-            // TODO
             throw new NotImplementedException();
         }
     }
